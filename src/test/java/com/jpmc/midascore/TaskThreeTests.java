@@ -23,6 +23,9 @@ public class TaskThreeTests {
     @Autowired
     private FileLoader fileLoader;
 
+    @Autowired
+    private com.jpmc.midascore.component.DatabaseConduit databaseConduit;
+
     @Test
     void task_three_verifier() throws InterruptedException {
         userPopulator.populate();
@@ -38,9 +41,13 @@ public class TaskThreeTests {
         logger.info("----------------------------------------------------------");
         logger.info("use your debugger to find out what waldorf's balance is after all transactions are processed");
         logger.info("kill this test once you find the answer");
-        while (true) {
-            Thread.sleep(20000);
-            logger.info("...");
+        Thread.sleep(2000); // Wait for kafka processing
+        
+        com.jpmc.midascore.entity.UserRecord waldorf = databaseConduit.getUserByName("waldorf");
+        if (waldorf != null) {
+            logger.info("WALDORFS_BALANCE_IS: {}", waldorf.getBalance());
+        } else {
+            logger.info("WALDORFS_BALANCE_IS: NOT_FOUND");
         }
     }
 }
