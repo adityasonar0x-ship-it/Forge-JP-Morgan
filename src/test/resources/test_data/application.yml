@@ -1,10 +1,7 @@
-server:
-  port: 33400
-
 general:
   kafka-topic: trader-updates
 spring:
-  kafka:
+  kafka: 
     consumer:
       value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
       properties:
