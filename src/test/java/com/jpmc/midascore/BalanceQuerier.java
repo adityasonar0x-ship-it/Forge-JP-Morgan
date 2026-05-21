@@ -1,20 +1,23 @@
 package com.jpmc.midascore;
 
 import com.jpmc.midascore.foundation.Balance;
-import org.springframework.boot.web.client.RestTemplateBuilder;
+import com.jpmc.midascore.repository.UserRepository;
+import com.jpmc.midascore.entity.UserRecord;
 import org.springframework.stereotype.Component;
-import org.springframework.web.client.RestTemplate;
 
 @Component
 public class BalanceQuerier {
-    private final RestTemplate restTemplate;
+    private final UserRepository userRepository;
 
-    public BalanceQuerier(RestTemplateBuilder builder) {
-        this.restTemplate = builder.build();
+    public BalanceQuerier(UserRepository userRepository) {
+        this.userRepository = userRepository;
     }
 
     public Balance query(Long userId) {
-        String url = "http://localhost:33400/balance?userId=" + userId;
-        return restTemplate.getForObject(url, Balance.class);
+        UserRecord user = userRepository.findById(userId);
+        if (user == null) {
+            return new Balance(0);
+        }
+        return new Balance(user.getBalance());
     }
 }
