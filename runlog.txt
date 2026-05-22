@@ -1,0 +1,98 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------------< com.jpmc:midas-core >-------------------------
+[INFO] Building midas-core 1.0.0
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> spring-boot-maven-plugin:3.2.5:run (default-cli) > test-compile @ midas-core >>>
+[INFO] 
+[INFO] --- maven-resources-plugin:3.3.1:resources (default-resources) @ midas-core ---
+[INFO] skip non existing resourceDirectory C:\Users\mahes\OneDrive\Documents\Sigma WEB DEV\forage-midas\src\main\resources
+[INFO] skip non existing resourceDirectory C:\Users\mahes\OneDrive\Documents\Sigma WEB DEV\forage-midas\src\main\resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.11.0:compile (default-compile) @ midas-core ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:3.3.1:testResources (default-testResources) @ midas-core ---
+[INFO] Copying 5 resources from src\test\resources to target\test-classes
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.11.0:testCompile (default-testCompile) @ midas-core ---
+[INFO] Changes detected - recompiling the module! :source
+[INFO] Compiling 9 source files with javac [debug release 17] to target\test-classes
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] /C:/Users/mahes/OneDrive/Documents/Sigma WEB DEV/forage-midas/src/test/java/com/jpmc/midascore/FileLoader.java:[4,55] package org.testcontainers.shaded.org.apache.commons.io does not exist
+[ERROR] /C:/Users/mahes/OneDrive/Documents/Sigma WEB DEV/forage-midas/src/test/java/com/jpmc/midascore/FileLoader.java:[13,31] cannot find symbol
+  symbol:   variable IOUtils
+  location: class com.jpmc.midascore.FileLoader
+[INFO] 2 errors 
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  12.785 s
+[INFO] Finished at: 2026-05-22T00:05:01+05:30
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.11.0:testCompile (default-testCompile) on project midas-core: Compilation failure: Compilation failure: 
+[ERROR] /C:/Users/mahes/OneDrive/Documents/Sigma WEB DEV/forage-midas/src/test/java/com/jpmc/midascore/FileLoader.java:[4,55] package org.testcontainers.shaded.org.apache.commons.io does not exist
+[ERROR] /C:/Users/mahes/OneDrive/Documents/Sigma WEB DEV/forage-midas/src/test/java/com/jpmc/midascore/FileLoader.java:[13,31] cannot find symbol
+[ERROR]   symbol:   variable IOUtils
+[ERROR]   location: class com.jpmc.midascore.FileLoader
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+
+C:\Users\mahes\OneDrive\Documents\Sigma WEB DEV\forage-midas>The filename, directory name, or volume label syntax is incorrect.
+
+C:\Users\mahes\OneDrive\Documents\Sigma WEB DEV\forage-midas>''cd' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\mahes\OneDrive\Documents\Sigma WEB DEV\forage-midas>' was unexpected at this time.
+
+C:\Users\mahes\OneDrive\Documents\Sigma WEB DEV\forage-midas>C:\Users\mahes\OneDrive\Documents\Sigma WEB DEV\forage-midas>The syntax of the command is incorrect.
+
+C:\Users\mahes\OneDrive\Documents\Sigma WEB DEV\forage-midas>The syntax of the command is incorrect.
+
+C:\Users\mahes\OneDrive\Documents\Sigma WEB DEV\forage-midas>The syntax of the command is incorrect.
+
+C:\Users\mahes\OneDrive\Documents\Sigma WEB DEV\forage-midas>C:\Users\mahes\OneDrive\Documents\Sigma WEB DEV\forage-midas>
+C:\Users\mahes\OneDrive\Documents\Sigma WEB DEV\forage-midas>C:\Users\mahes\OneDrive\Documents\Sigma WEB DEV\forage-midas>
+C:\Users\mahes\OneDrive\Documents\Sigma WEB DEV\forage-midas>C:\Users\mahes\OneDrive\Documents\Sigma WEB DEV\forage-midas>
+Name       Length
+----       ------
+build2.txt   3316
+
+
+
+C:\Users\mahes\OneDrive\Documents\Sigma WEB DEV\forage-midas>[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------------< com.jpmc:midas-core >-------------------------
+[INFO] Building midas-core 1.0.0
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.293 s
+[INFO] Finished at: 2026-05-22T00:10:01+05:30
+[INFO] ------------------------------------------------------------------------
+[ERROR] Unknown lifecycle phase ".test.skip=true". You must specify a valid lifecycle phase or a goal in the format <plugin-prefix>:<goal> or <plugin-group-id>:<plugin-artifact-id>[:<plugin-version>]:<goal>. Available lifecycle phases are: validate, initialize, generate-sources, process-sources, generate-resources, process-resources, compile, process-classes, generate-test-sources, process-test-sources, generate-test-resources, process-test-resources, test-compile, process-test-classes, test, prepare-package, package, pre-integration-test, integration-test, post-integration-test, verify, install, deploy, pre-clean, clean, post-clean, pre-site, site, post-site, site-deploy. -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/LifecyclePhaseNotFoundException
+
+
+C:\Users\mahes\OneDrive\Documents\Sigma WEB DEV\forage-midas>C:\Users\mahes\OneDrive\Documents\Sigma WEB DEV\forage-midas>C:\Users\mahes\OneDrive\Documents\Sigma WEB DEV\forage-midas>
+C:\Users\mahes\OneDrive\Documents\Sigma WEB DEV\forage-midas>
+C:\Users\mahes\OneDrive\Documents\Sigma WEB DEV\forage-midas>
+C:\Users\mahes\OneDrive\Documents\Sigma WEB DEV\forage-midas>
+C:\Users\mahes\OneDrive\Documents\Sigma WEB DEV\forage-midas>The system cannot find the path specified.
+
+C:\Users\mahes\OneDrive\Documents\Sigma WEB DEV\forage-midas>C:\Users\mahes\OneDrive\Documents\Sigma WEB DEV\forage-midas>More? More? More? More? More? More? More? More? More? More? More? More? More? More? 
