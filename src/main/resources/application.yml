@@ -1,7 +1,17 @@
 general:
   kafka-topic: trader-updates
 
+server:
+  port: 33400
+
 spring:
+  datasource:
+    url: jdbc:h2:mem:midasdb
+    driver-class-name: org.h2.Driver
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: false
   kafka:
     producer:
       value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
@@ -9,7 +19,4 @@ spring:
       auto-offset-reset: earliest
       value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
       properties:
-        spring:
-          json:
-            trusted:
-              packages: "*"
+        spring.json.trusted.packages: "*"
