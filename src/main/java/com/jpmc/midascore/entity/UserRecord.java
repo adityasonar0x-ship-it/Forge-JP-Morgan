@@ -2,7 +2,7 @@ package com.jpmc.midascore.entity;
 
 import jakarta.persistence.*;
 
-@Entity
+@Entity // it represents a table corresponding to it in db
 public class UserRecord {
 
     @Id
@@ -16,6 +16,7 @@ public class UserRecord {
     private float balance;
 
     protected UserRecord() {
+        // empty because hibernate needs empty constructor to create objects internally
     }
 
     public UserRecord(String name, float balance) {
