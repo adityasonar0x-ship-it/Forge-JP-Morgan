@@ -23,4 +23,5 @@ public class KafkaProducer {
         String targetTopic = Objects.requireNonNull(topic, "topic must not be null");
         kafkaTemplate.send(targetTopic, new Transaction(Long.parseLong(transactionData[0]), Long.parseLong(transactionData[1]), Float.parseFloat(transactionData[2])));
     }
+    
 }
