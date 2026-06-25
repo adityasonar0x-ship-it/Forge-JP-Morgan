@@ -11,3 +11,5 @@ spring:
       properties:
         spring.json.trusted.packages: '*'
         spring.json.value.default.type: com.jpmc.midascore.foundation.Transaction
+server:
+  port: 33400
