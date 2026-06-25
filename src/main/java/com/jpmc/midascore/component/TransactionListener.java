@@ -13,9 +13,11 @@ import org.springframework.transaction.annotation.Transactional;
 public class TransactionListener {
     private static final Logger logger = LoggerFactory.getLogger(TransactionListener.class);
     private final DatabaseConduit databaseConduit;
+    private final IncentiveApiClient incentiveApiClient;
 
-    public TransactionListener(DatabaseConduit databaseConduit) {
+    public TransactionListener(DatabaseConduit databaseConduit, IncentiveApiClient incentiveApiClient) {
         this.databaseConduit = databaseConduit;
+        this.incentiveApiClient = incentiveApiClient;
     }
 
     @KafkaListener(topics = "${general.kafka-topic}", groupId = "midas-core-group")
@@ -34,12 +36,14 @@ public class TransactionListener {
             return;
         }
 
+        float incentiveAmount = incentiveApiClient.fetchIncentiveAmount(transaction);
+
         sender.setBalance(sender.getBalance() - transaction.getAmount());
-        recipient.setBalance(recipient.getBalance() + transaction.getAmount());
+        recipient.setBalance(recipient.getBalance() + transaction.getAmount() + incentiveAmount);
 
         databaseConduit.saveUser(sender);
         databaseConduit.saveUser(recipient);
-        databaseConduit.saveTransaction(new TransactionRecord(sender, recipient, transaction.getAmount()));
+        databaseConduit.saveTransaction(new TransactionRecord(sender, recipient, transaction.getAmount(), incentiveAmount));
 
         logger.info("Processed transaction: {}", transaction);
     }
